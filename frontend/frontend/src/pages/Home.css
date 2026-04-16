@@ -1,0 +1,163 @@
+.home-container {
+  display: block;
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ceecfa;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+  justify-content: flex-end;
+}
+
+.home-container.dark {
+  background: #1e1e2f;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.acciones button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.stat-card.green {
+  background: #28a745;
+  color: white;
+}
+
+.stat-card.yellow {
+  background: #ffc107;
+}
+
+.home-container.dark .stat-card {
+  background: #1a1a98;
+}
+
+/* FILTROS */
+.filtros {
+  margin-bottom: 20px;
+}
+
+.filtros input {
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+/* CHIPS */
+.chips {
+  display: flex;
+  gap: 10px;
+}
+
+.chip {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #ddd;
+}
+
+.chip.active {
+  background: #007bff;
+  color: white;
+}
+
+/* CARDS */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  width: 260px;
+  padding: 18px;
+  border-radius: 14px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  animation: fadeIn 0.4s ease;
+}
+
+.home-container.dark .card {
+  background: #2a2a40;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  background: #faeffa;
+}
+
+/* BADGE */
+.badge {
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.badge.green {
+  background: #28a745;
+  color: white;
+}
+
+.badge.yellow {
+  background: #ffc107;
+}
+
+/* TEXT */
+.tipo {
+  font-weight: bold;
+}
+
+.accion {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

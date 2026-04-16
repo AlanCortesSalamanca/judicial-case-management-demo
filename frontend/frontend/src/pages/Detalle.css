@@ -1,0 +1,268 @@
+.detalle-container {
+  padding: 25px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ceecfa;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* HEADER */
+.detalle-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-back {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-back:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge.green {
+  background: #28a745;
+  color: white;
+}
+
+.badge.yellow {
+  background: #ffc107;
+  color: #333;
+}
+
+/* 🔥 HERO CARD (estado) */
+.estado-card {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.estado-card h2 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* 🔥 TIMELINE PRO (SIN SCROLL) */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 10px;
+}
+
+/* línea base */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255,255,255,0.3);
+  z-index: 0;
+}
+
+/* item */
+.timeline-item {
+  position: relative;
+  text-align: center;
+  flex: 1;
+  z-index: 1;
+}
+
+/* círculo */
+.circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* estados */
+.circle.done {
+  background: #28a745;
+  color: white;
+}
+
+.circle.actual {
+  background: white;
+  color: #007bff;
+  border: 2px solid white;
+}
+
+/* texto */
+.fase-nombre {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  max-width: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: normal;
+}
+
+/* 🔥 STEPPER PRO */
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin-top: 20px;
+}
+
+/* línea base */
+.stepper::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 5%;
+  width: 90%;
+  height: 2px;
+  background: rgba(255,255,255,0.3);
+  z-index: 0;
+}
+
+/* cada paso */
+.step {
+  position: relative;
+  text-align: center;
+  flex: 1;
+  z-index: 1;
+}
+
+/* punto */
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+
+/* completado */
+.dot.done {
+  background: #28a745;
+}
+
+/* actual */
+.dot.active {
+  background: #fff;
+  border: 3px solid #007bff;
+  transform: scale(1.2);
+}
+
+.estado-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* texto */
+.step span {
+  display: block;
+  margin-top: 8px;
+  font-size: 11px;
+  max-width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.2;
+}
+
+.estado {
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* LISTA */
+ul {
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* 🌙 DARK MODE */
+body.dark .detalle-container {
+  background: #1e1e2f;
+  color: white;
+}
+
+body.dark .card {
+  background: #2a2a40;
+  color: white;
+}
+
+body.dark .btn-back {
+  background: #444;
+}
+
+body.dark .btn-back:hover {
+  background: #666;
+}
+
+body.dark .estado-card {
+  background: linear-gradient(135deg, #23233a, #2f2f55);
+}
+
+body.dark .timeline::before {
+  background: #555;
+}
+
+body.dark .fase-nombre {
+  color: #ddd;
+}
+
+body.dark .badge.yellow {
+  color: black;
+}
